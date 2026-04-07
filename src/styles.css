@@ -712,7 +712,6 @@ img {
     overflow: hidden;
     height: 380px;
     cursor: pointer;
-    group: true;
 }
 
 .class-image {
