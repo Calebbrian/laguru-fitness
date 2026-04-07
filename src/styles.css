@@ -1711,6 +1711,7 @@ img {
     position: fixed;
     inset: 0;
     background: rgba(10, 10, 15, 0.8);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 10000;
     display: flex;
@@ -1947,7 +1948,7 @@ img {
     /* --- Mobile Hero --- */
     .hero {
         min-height: 100svh;
-        padding: 0 16px;
+        padding: 80px 16px 60px;
     }
 
     .hero-content {
@@ -1957,25 +1958,27 @@ img {
     .hero-badge {
         font-size: 0.65rem;
         padding: 6px 14px;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         letter-spacing: 1.5px;
     }
 
     .hero h1 {
         font-size: clamp(2rem, 9vw, 3.2rem);
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
     .hero-subtitle {
-        font-size: 0.95rem;
-        margin-bottom: 28px;
-        line-height: 1.6;
-        padding: 0 8px;
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+        line-height: 1.5;
+        padding: 0 4px;
     }
 
     .hero-buttons {
-        margin-bottom: 40px;
-        gap: 12px;
+        margin-bottom: 32px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .hero-buttons .btn {
@@ -1986,23 +1989,30 @@ img {
     }
 
     .hero-stats {
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-divider {
+        display: none;
     }
 
     .stat-number, .stat-suffix {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .stat-label {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .scroll-indicator {
-        bottom: 24px;
-    }
-
-    .scroll-indicator span {
-        font-size: 0.6rem;
+        display: none;
     }
 
     /* --- Mobile Sections --- */
@@ -2505,23 +2515,13 @@ img {
         font-size: 0.88rem;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
     .hero-stats {
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
     }
 
     .stat-number, .stat-suffix {
-        font-size: 1.6rem;
-    }
-
-    .stat-divider {
-        width: 40px;
-        height: 1px;
+        font-size: 1.4rem;
     }
 
     .section-title {
